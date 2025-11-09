@@ -28,13 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgbArticulos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArticulos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgbArticulos
+            // 
+            this.dgbArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbArticulos.Location = new System.Drawing.Point(160, 68);
+            this.dgbArticulos.Name = "dgbArticulos";
+            this.dgbArticulos.RowHeadersWidth = 62;
+            this.dgbArticulos.RowTemplate.Height = 28;
+            this.dgbArticulos.Size = new System.Drawing.Size(515, 254);
+            this.dgbArticulos.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgbArticulos);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArticulos)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgbArticulos;
     }
 }
 
