@@ -8,7 +8,6 @@ namespace presentacion
 {
     class ArticuloNegocio
     {
-
         public List<Articulo> Listar()
         {
             AccesoDatos accesoDatos = new AccesoDatos();
@@ -28,7 +27,6 @@ namespace presentacion
 
                     listaArticulos.Add(aux);
                 }
-
                 return listaArticulos;
             }
             catch (Exception)
@@ -40,11 +38,9 @@ namespace presentacion
                 accesoDatos.CerrarConexion();
             }
         }
-
         public void Agregar(Articulo articulo)
         {
             AccesoDatos accesoDatos = new AccesoDatos();
-
             try
             {
                 string consulta = @"INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenURL, Precio)
@@ -71,6 +67,44 @@ namespace presentacion
                 accesoDatos.CerrarConexion();
             }
 
+        }
+        public void Modificar(Articulo articulo)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                string consulta = @"UPDATE ARTICULOS 
+                                    SET 
+                                        Codigo = @codigo, 
+	                                    Nombre =  @nombre, 
+	                                    Descripcion = @descripcion, 
+	                                    IdMarca = @idMarca, 
+                                        IdCategoria = @idCategoria, 
+	                                    ImagenUrl = @imagenURL, 
+	                                    Precio = @precio
+                                    WHERE Id = @id";
+
+                accesoDatos.SetearConsulta(consulta);
+
+                accesoDatos.SetearParametro("@codigo", articulo.Codigo);
+                accesoDatos.SetearParametro("@nombre", articulo.Nombre);
+                accesoDatos.SetearParametro("@descripcion", articulo.Descripcion);
+                accesoDatos.SetearParametro("@idMarca", articulo.Marca.Id);
+                accesoDatos.SetearParametro("@idCategoria", articulo.Categoria.Id);
+                accesoDatos.SetearParametro("@imagenURL", articulo.ImagenUrl);
+                accesoDatos.SetearParametro("@precio", articulo.Precio);
+                accesoDatos.SetearParametro("@Id", articulo.Id);
+
+                accesoDatos.EjecutarAccion();
+            }
+            catch (Exception)
+            { 
+                throw;
+            }
+            finally { 
+                accesoDatos.CerrarConexion();
+            }
         }
 
     }
