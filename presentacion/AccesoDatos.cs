@@ -34,10 +34,29 @@ namespace presentacion
                 conexion.Open();
                 lector = comando.ExecuteReader();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
+        }
+
+        public void EjecutarAccion()
+        {
+
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public void SetearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
         }
 
         public void CerrarConexion()
