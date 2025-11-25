@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace presentacion
 {
@@ -14,7 +15,7 @@ namespace presentacion
             List<Articulo> listaArticulos = new List<Articulo>();
             try
             {
-                accesoDatos.SetearConsulta("SELECT Codigo, Nombre, Descripcion, Precio FROM ARTICULOS");
+                accesoDatos.SetearConsulta("SELECT Codigo, Nombre, Descripcion, Precio FROM ARTICULOS Where Precio >= 0"); //La condicion del Where es porque la baja logica deja los articulos con precio negativos inactivos.
                 accesoDatos.EjecutarLectura();
 
                 while (accesoDatos.Lector.Read())
@@ -107,5 +108,47 @@ namespace presentacion
             }
         }
 
+        public void EliminarFisico (int id) //Eliminado fisico, elimina completamente de BD. 
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                string consulta = "DELETE FROM ARTICULOS Where Id = @Id";
+                accesoDatos.SetearConsulta(consulta);
+                accesoDatos.SetearParametro("Id",id);
+                accesoDatos.EjecutarAccion();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally{
+                accesoDatos.CerrarConexion();
+            }
+        }
+
+        public void EliminarLogico(int id) { //Definimos como regla de negocio que el eliminado lógico sera dejando los precios de los articulos en negativo, ya que no se nos permitia modificar la estructura de la BD. 
+
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                string consulta = "Update ARTICULOS set Precio = (-Precio) Where Id = @Id";
+                accesoDatos.SetearConsulta(consulta);
+                accesoDatos.SetearParametro("Id", id);
+                accesoDatos.EjecutarAccion();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                accesoDatos.CerrarConexion();
+            }
+        }
     }
+
+    //Nos falta agregar un metodo filtrar, pero, como no especifica que criterios para filtrar pide. Probablemente, reutilicemos el metodo listar, para que pueda listar por crierios. 
+    //A definir segun pantalla. 
 }
