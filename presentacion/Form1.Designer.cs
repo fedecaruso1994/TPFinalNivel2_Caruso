@@ -35,7 +35,7 @@
             // dgbArticulos
             // 
             this.dgbArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbArticulos.Location = new System.Drawing.Point(160, 68);
+            this.dgbArticulos.Location = new System.Drawing.Point(123, 61);
             this.dgbArticulos.Name = "dgbArticulos";
             this.dgbArticulos.RowHeadersWidth = 62;
             this.dgbArticulos.RowTemplate.Height = 28;
