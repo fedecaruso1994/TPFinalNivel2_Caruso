@@ -1,6 +1,6 @@
 ﻿namespace presentacion
 {
-    partial class Form1
+    partial class frmArticulos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,36 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgbArticulos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgbArticulos)).BeginInit();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureArticulo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureArticulo)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgbArticulos
+            // dgvArticulos
             // 
-            this.dgbArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbArticulos.Location = new System.Drawing.Point(123, 61);
-            this.dgbArticulos.Name = "dgbArticulos";
-            this.dgbArticulos.RowHeadersWidth = 62;
-            this.dgbArticulos.RowTemplate.Height = 28;
-            this.dgbArticulos.Size = new System.Drawing.Size(515, 254);
-            this.dgbArticulos.TabIndex = 0;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(54, 55);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersWidth = 62;
+            this.dgvArticulos.RowTemplate.Height = 28;
+            this.dgvArticulos.Size = new System.Drawing.Size(994, 328);
+            this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
-            // Form1
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureArticulo
+            // 
+            this.pictureArticulo.Location = new System.Drawing.Point(1126, 55);
+            this.pictureArticulo.Name = "pictureArticulo";
+            this.pictureArticulo.Size = new System.Drawing.Size(338, 328);
+            this.pictureArticulo.TabIndex = 2;
+            this.pictureArticulo.TabStop = false;
+            // 
+            // frmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgbArticulos);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dgbArticulos)).EndInit();
+            this.ClientSize = new System.Drawing.Size(1514, 450);
+            this.Controls.Add(this.pictureArticulo);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dgvArticulos);
+            this.Name = "frmArticulos";
+            this.Text = "Gestion de Stock";
+            this.Load += new System.EventHandler(this.frmArticulos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureArticulo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgbArticulos;
+        private System.Windows.Forms.DataGridView dgvArticulos;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureArticulo;
     }
 }
 
