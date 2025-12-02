@@ -67,6 +67,12 @@ namespace presentacion
                 cargarImagenTapa(seleccionado.ImagenUrl);
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FrmAgregar agregarArticulo = new FrmAgregar();
+            agregarArticulo.ShowDialog();
+        }
     }
 
 
