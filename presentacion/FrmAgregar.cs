@@ -34,6 +34,8 @@ namespace presentacion
                 articulo.Nombre = tbxCodigo.Text;
                 articulo.Descripcion = tbxCodigo.Text;
                 articulo.Precio = numPrecio.Value;
+                articulo.Categoria = (Categoria)comboCategoria.SelectedItem;
+                articulo.Marca = (Marca)comboMarca.SelectedItem;
 
                 articuloNegocio.Agregar(articulo);
                 MessageBox.Show("Artículo agregado con éxito.");
@@ -51,6 +53,24 @@ namespace presentacion
         private void numPrecio_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmAgregar_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            MarcaNegocio marcaNegopcio = new MarcaNegocio();
+            try
+            {
+                comboCategoria.DataSource = categoriaNegocio.Listar();
+                comboMarca.DataSource = marcaNegopcio.Listar();
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.ToString());
+                MessageBox.Show("Ha ocurrido un error.");
+            }
         }
     }
 }
