@@ -1,4 +1,7 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using presentacion.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using dominio;
-using negocio;
+
 
 namespace presentacion
 {
@@ -34,6 +36,7 @@ namespace presentacion
                 articulo.Nombre = tbxCodigo.Text;
                 articulo.Descripcion = tbxCodigo.Text;
                 articulo.Precio = numPrecio.Value;
+                articulo.ImagenUrl = txtImagen.Text;
                 articulo.Categoria = (Categoria)comboCategoria.SelectedItem;
                 articulo.Marca = (Marca)comboMarca.SelectedItem;
 
@@ -67,10 +70,14 @@ namespace presentacion
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine(ex.ToString());
                 MessageBox.Show("Ha ocurrido un error.");
             }
+        }
+
+        private void txtImagen_Leave(object sender, EventArgs e)
+        {
+            HelperImage.CargarImagen(pictureBoxAlta,txtImagen.Text);
         }
     }
 }

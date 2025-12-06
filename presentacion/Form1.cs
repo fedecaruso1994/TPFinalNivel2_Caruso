@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
 using negocio;
+using presentacion.Helpers;
 
 namespace presentacion
 {
@@ -45,26 +46,13 @@ namespace presentacion
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
         }
-        private void cargarImagenTapa(string urlImagen)
-        {
-            try
-            {
-                pictureArticulo.Load(urlImagen);
-            }
-            catch (Exception ex)
-            {
-                pictureArticulo.Load("https://img.freepik.com/vector-premium/icono-marco-fotos-foto-vacia-blanco-vector-sobre-fondo-transparente-aislado-eps-10_399089-1290.jpg");
-                Console.WriteLine(ex.ToString());
-               
-            }
-        }
-
+        
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvArticulos.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                cargarImagenTapa(seleccionado.ImagenUrl);
+                HelperImage.CargarImagen(pictureArticulo, seleccionado.ImagenUrl);    
             }
         }
 
@@ -72,6 +60,7 @@ namespace presentacion
         {
             FrmAgregar agregarArticulo = new FrmAgregar();
             agregarArticulo.ShowDialog();
+            cargar();
         }
     }
 

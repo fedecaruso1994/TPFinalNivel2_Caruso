@@ -61,8 +61,8 @@ namespace negocio
             AccesoDatos accesoDatos = new AccesoDatos();
             try
             {
-                string consulta = @"INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria,  Precio)
-                                    VALUES (@Codigo, @Nombre , @Descripcion, @IdMarca, @IdCategoria , @Precio)";
+                string consulta = @"INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio)
+                                    VALUES (@Codigo, @Nombre , @Descripcion, @IdMarca, @IdCategoria , @urlImagen, @Precio)";
 
                 accesoDatos.SetearConsulta(consulta);
 
@@ -71,7 +71,7 @@ namespace negocio
                 accesoDatos.SetearParametro("@Descripcion", articulo.Descripcion);
                 accesoDatos.SetearParametro("@IdMarca", articulo.Marca.Id);
                 accesoDatos.SetearParametro("@IdCategoria", articulo.Categoria.Id);
-                //accesoDatos.SetearParametro("@urlImagen", articulo.ImagenUrl);
+                accesoDatos.SetearParametro("@urlImagen", articulo.ImagenUrl);
                 accesoDatos.SetearParametro("@Precio", articulo.Precio);
 
                 accesoDatos.EjecutarAccion();
