@@ -16,9 +16,16 @@ namespace presentacion
 {
     public partial class FrmAgregar : Form
     {
+        private Articulo articulo = null;
         public FrmAgregar()
         {
             InitializeComponent();
+        }
+        public FrmAgregar(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Artículo";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -27,23 +34,34 @@ namespace presentacion
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
-        {   
-            Articulo articulo = new Articulo();
+        {
+
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
+                if (articulo == null)
+                    articulo = new Articulo();
+
                 articulo.Codigo = tbxCodigo.Text;
-                articulo.Nombre = tbxCodigo.Text;
+                articulo.Nombre = tbxNombre.Text;
                 articulo.Descripcion = tbxCodigo.Text;
                 articulo.Precio = numPrecio.Value;
-                articulo.ImagenUrl = txtImagen.Text;
+                articulo.ImagenUrl = tbxImagen.Text;
                 articulo.Categoria = (Categoria)comboCategoria.SelectedItem;
                 articulo.Marca = (Marca)comboMarca.SelectedItem;
 
-                articuloNegocio.Agregar(articulo);
-                MessageBox.Show("Artículo agregado con éxito.");
+                if (articulo.Id != 0)
+                {
+                    articuloNegocio.Modificar(articulo);
+                    MessageBox.Show("Artículo modificado con éxito.");
+                }
+                else
+                {
+                    articuloNegocio.Agregar(articulo);
+                    MessageBox.Show("Artículo agregado con éxito.");
+                }
                 Close();
-                
+
 
             }
             catch (Exception ex)
@@ -61,11 +79,27 @@ namespace presentacion
         private void FrmAgregar_Load(object sender, EventArgs e)
         {
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-            MarcaNegocio marcaNegopcio = new MarcaNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
             try
             {
                 comboCategoria.DataSource = categoriaNegocio.Listar();
-                comboMarca.DataSource = marcaNegopcio.Listar();
+                comboCategoria.ValueMember = "Id";
+                comboCategoria.DisplayMember = "Descripcion";
+                comboMarca.DataSource = marcaNegocio.Listar();
+                comboMarca.ValueMember = "Id";
+                comboMarca.DisplayMember = "Descripcion";
+
+                if (articulo != null)
+                {
+                    tbxCodigo.Text = articulo.Codigo;
+                    tbxNombre.Text = articulo.Nombre;
+                    tbxDescripcion.Text = articulo.Descripcion;
+                    tbxImagen.Text = articulo.ImagenUrl;
+                    numPrecio.Value = articulo.Precio;
+                    HelperImage.CargarImagen(pictureBoxAlta, articulo.ImagenUrl);
+                    comboCategoria.SelectedValue = articulo.Categoria.Id;
+                    comboMarca.SelectedValue = articulo.Marca.Id;
+                }
 
             }
             catch (Exception ex)
@@ -75,9 +109,9 @@ namespace presentacion
             }
         }
 
-        private void txtImagen_Leave(object sender, EventArgs e)
+        private void tbxImagen_Leave(object sender, EventArgs e)
         {
-            HelperImage.CargarImagen(pictureBoxAlta,txtImagen.Text);
+            HelperImage.CargarImagen(pictureBoxAlta, tbxImagen.Text);
         }
     }
 }

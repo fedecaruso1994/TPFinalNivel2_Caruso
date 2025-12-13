@@ -62,6 +62,14 @@ namespace presentacion
             agregarArticulo.ShowDialog();
             cargar();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            FrmAgregar modiicarArticulo = new FrmAgregar(seleccionado);
+            modiicarArticulo.ShowDialog();
+            cargar();
+        }
     }
 
 

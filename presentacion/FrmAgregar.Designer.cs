@@ -42,7 +42,7 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.comboMarca = new System.Windows.Forms.ComboBox();
             this.comboCategoria = new System.Windows.Forms.ComboBox();
-            this.txtImagen = new System.Windows.Forms.TextBox();
+            this.tbxImagen = new System.Windows.Forms.TextBox();
             this.lblImagen = new System.Windows.Forms.Label();
             this.pictureBoxAlta = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
@@ -178,13 +178,13 @@
             this.comboCategoria.Size = new System.Drawing.Size(173, 28);
             this.comboCategoria.TabIndex = 3;
             // 
-            // txtImagen
+            // tbxImagen
             // 
-            this.txtImagen.Location = new System.Drawing.Point(166, 220);
-            this.txtImagen.Name = "txtImagen";
-            this.txtImagen.Size = new System.Drawing.Size(173, 26);
-            this.txtImagen.TabIndex = 4;
-            this.txtImagen.Leave += new System.EventHandler(this.txtImagen_Leave);
+            this.tbxImagen.Location = new System.Drawing.Point(166, 220);
+            this.tbxImagen.Name = "tbxImagen";
+            this.tbxImagen.Size = new System.Drawing.Size(173, 26);
+            this.tbxImagen.TabIndex = 4;
+            this.tbxImagen.Leave += new System.EventHandler(this.tbxImagen_Leave);
             // 
             // lblImagen
             // 
@@ -210,7 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 527);
             this.Controls.Add(this.pictureBoxAlta);
-            this.Controls.Add(this.txtImagen);
+            this.Controls.Add(this.tbxImagen);
             this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.comboCategoria);
             this.Controls.Add(this.comboMarca);
@@ -252,7 +252,7 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.ComboBox comboMarca;
         private System.Windows.Forms.ComboBox comboCategoria;
-        private System.Windows.Forms.TextBox txtImagen;
+        private System.Windows.Forms.TextBox tbxImagen;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.PictureBox pictureBoxAlta;
     }

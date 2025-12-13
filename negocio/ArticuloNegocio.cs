@@ -112,7 +112,7 @@ namespace negocio
                 accesoDatos.SetearParametro("@idCategoria", articulo.Categoria.Id);
                 accesoDatos.SetearParametro("@imagenURL", articulo.ImagenUrl);
                 accesoDatos.SetearParametro("@precio", articulo.Precio);
-                accesoDatos.SetearParametro("@Id", articulo.Id);
+                accesoDatos.SetearParametro("@id", articulo.Id);
 
                 accesoDatos.EjecutarAccion();
             }
