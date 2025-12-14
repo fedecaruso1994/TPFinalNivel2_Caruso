@@ -70,6 +70,35 @@ namespace presentacion
             modiicarArticulo.ShowDialog();
             cargar();
         }
+
+        private void btnEliminarLogico_Click(object sender, EventArgs e)
+        {
+            eliminar(true); 
+        }
+
+        private void eliminar(bool logico = false)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Desea confirmar la eliminacion?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    if (logico) 
+                        negocio.EliminarLogico(seleccionado.Id);
+                     //TO DO: Agregar eliminar fisico
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                MessageBox.Show("No es posible eliminar, ha ocurrido un error.");
+
+            }
+        }
     }
 
 

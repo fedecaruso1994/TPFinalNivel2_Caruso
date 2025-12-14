@@ -32,7 +32,7 @@
             this.pictureArticulo = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEliminarLogico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArticulo)).BeginInit();
             this.SuspendLayout();
@@ -80,21 +80,22 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // button3
+            // btnEliminarLogico
             // 
-            this.button3.Location = new System.Drawing.Point(475, 420);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 58);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEliminarLogico.Location = new System.Drawing.Point(475, 420);
+            this.btnEliminarLogico.Name = "btnEliminarLogico";
+            this.btnEliminarLogico.Size = new System.Drawing.Size(170, 58);
+            this.btnEliminarLogico.TabIndex = 5;
+            this.btnEliminarLogico.Text = "Eliminar";
+            this.btnEliminarLogico.UseVisualStyleBackColor = true;
+            this.btnEliminarLogico.Click += new System.EventHandler(this.btnEliminarLogico_Click);
             // 
             // frmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1489, 511);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnEliminarLogico);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pictureArticulo);
@@ -114,7 +115,7 @@
         private System.Windows.Forms.PictureBox pictureArticulo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEliminarLogico;
     }
 }
 
