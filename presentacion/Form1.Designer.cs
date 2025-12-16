@@ -33,15 +33,24 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminarLogico = new System.Windows.Forms.Button();
+            this.lblFiltro = new System.Windows.Forms.Label();
+            this.tbxFiltro = new System.Windows.Forms.TextBox();
+            this.btnBuscarPrecio = new System.Windows.Forms.Button();
+            this.lblDesde = new System.Windows.Forms.Label();
+            this.lblHasta = new System.Windows.Forms.Label();
+            this.numDesde = new System.Windows.Forms.NumericUpDown();
+            this.numHasta = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDesde)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHasta)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticulos
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvArticulos.Location = new System.Drawing.Point(54, 55);
+            this.dgvArticulos.Location = new System.Drawing.Point(59, 69);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 62;
@@ -53,7 +62,7 @@
             // 
             // pictureArticulo
             // 
-            this.pictureArticulo.Location = new System.Drawing.Point(1092, 55);
+            this.pictureArticulo.Location = new System.Drawing.Point(1093, 69);
             this.pictureArticulo.Name = "pictureArticulo";
             this.pictureArticulo.Size = new System.Drawing.Size(338, 328);
             this.pictureArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,11 +99,77 @@
             this.btnEliminarLogico.UseVisualStyleBackColor = true;
             this.btnEliminarLogico.Click += new System.EventHandler(this.btnEliminarLogico_Click);
             // 
+            // lblFiltro
+            // 
+            this.lblFiltro.AutoSize = true;
+            this.lblFiltro.Location = new System.Drawing.Point(56, 27);
+            this.lblFiltro.Name = "lblFiltro";
+            this.lblFiltro.Size = new System.Drawing.Size(63, 20);
+            this.lblFiltro.TabIndex = 6;
+            this.lblFiltro.Text = "Buscar:";
+            // 
+            // tbxFiltro
+            // 
+            this.tbxFiltro.Location = new System.Drawing.Point(125, 24);
+            this.tbxFiltro.Name = "tbxFiltro";
+            this.tbxFiltro.Size = new System.Drawing.Size(289, 26);
+            this.tbxFiltro.TabIndex = 7;
+            this.tbxFiltro.TextChanged += new System.EventHandler(this.tbxFiltro_TextChanged);
+            // 
+            // btnBuscarPrecio
+            // 
+            this.btnBuscarPrecio.Location = new System.Drawing.Point(495, 21);
+            this.btnBuscarPrecio.Name = "btnBuscarPrecio";
+            this.btnBuscarPrecio.Size = new System.Drawing.Size(174, 32);
+            this.btnBuscarPrecio.TabIndex = 12;
+            this.btnBuscarPrecio.Text = "Buscar por precio:";
+            this.btnBuscarPrecio.UseVisualStyleBackColor = true;
+            this.btnBuscarPrecio.Click += new System.EventHandler(this.btnBuscarPrecio_Click);
+            // 
+            // lblDesde
+            // 
+            this.lblDesde.AutoSize = true;
+            this.lblDesde.Location = new System.Drawing.Point(684, 27);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.Size = new System.Drawing.Size(60, 20);
+            this.lblDesde.TabIndex = 13;
+            this.lblDesde.Text = "Desde:";
+            // 
+            // lblHasta
+            // 
+            this.lblHasta.AutoSize = true;
+            this.lblHasta.Location = new System.Drawing.Point(900, 26);
+            this.lblHasta.Name = "lblHasta";
+            this.lblHasta.Size = new System.Drawing.Size(56, 20);
+            this.lblHasta.TabIndex = 14;
+            this.lblHasta.Text = "Hasta:";
+            // 
+            // numDesde
+            // 
+            this.numDesde.Location = new System.Drawing.Point(750, 24);
+            this.numDesde.Name = "numDesde";
+            this.numDesde.Size = new System.Drawing.Size(120, 26);
+            this.numDesde.TabIndex = 15;
+            // 
+            // numHasta
+            // 
+            this.numHasta.Location = new System.Drawing.Point(962, 24);
+            this.numHasta.Name = "numHasta";
+            this.numHasta.Size = new System.Drawing.Size(120, 26);
+            this.numHasta.TabIndex = 16;
+            // 
             // frmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1489, 511);
+            this.ClientSize = new System.Drawing.Size(1489, 532);
+            this.Controls.Add(this.numHasta);
+            this.Controls.Add(this.numDesde);
+            this.Controls.Add(this.lblHasta);
+            this.Controls.Add(this.lblDesde);
+            this.Controls.Add(this.btnBuscarPrecio);
+            this.Controls.Add(this.tbxFiltro);
+            this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.btnEliminarLogico);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -105,7 +180,10 @@
             this.Load += new System.EventHandler(this.frmArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDesde)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHasta)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -116,6 +194,13 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminarLogico;
+        private System.Windows.Forms.Label lblFiltro;
+        private System.Windows.Forms.TextBox tbxFiltro;
+        private System.Windows.Forms.Button btnBuscarPrecio;
+        private System.Windows.Forms.Label lblDesde;
+        private System.Windows.Forms.Label lblHasta;
+        private System.Windows.Forms.NumericUpDown numDesde;
+        private System.Windows.Forms.NumericUpDown numHasta;
     }
 }
 

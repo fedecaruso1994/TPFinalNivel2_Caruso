@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace presentacion
 
         private void frmArticulos_Load(object sender, EventArgs e)
         {
-                cargar();
+            cargar();
 
         }
         private void cargar()
@@ -46,13 +47,13 @@ namespace presentacion
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
         }
-        
+
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvArticulos.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                HelperImage.CargarImagen(pictureArticulo, seleccionado.ImagenUrl);    
+                HelperImage.CargarImagen(pictureArticulo, seleccionado.ImagenUrl);
             }
         }
 
@@ -73,7 +74,7 @@ namespace presentacion
 
         private void btnEliminarLogico_Click(object sender, EventArgs e)
         {
-            eliminar(true); 
+            eliminar(true);
         }
 
         private void eliminar(bool logico = false)
@@ -86,9 +87,9 @@ namespace presentacion
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    if (logico) 
+                    if (logico)
                         negocio.EliminarLogico(seleccionado.Id);
-                     //TO DO: Agregar eliminar fisico
+                    //TO DO: Agregar eliminar fisico
                     cargar();
                 }
             }
@@ -99,7 +100,56 @@ namespace presentacion
 
             }
         }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = tbxFiltro.Text.ToUpper();
+
+            if (filtro.Length > 2)
+                listaFiltrada = listadoArticulos.FindAll(art => art.Nombre.ToUpper().Contains(filtro) || art.Codigo.ToUpper().Contains(filtro) || art.Marca.Descripcion.ToUpper().Contains(filtro) || art.Categoria.Descripcion.ToUpper().Contains(filtro));
+            else
+                listaFiltrada = listadoArticulos;
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            ocultarColumnas();
+        }
+
+        private void btnBuscarPrecio_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> listaFiltrada;
+
+
+            try
+            { 
+                decimal desde = numDesde.Value;
+                decimal hasta = numHasta.Value;
+                if (desde > 0 && hasta > 0 && desde > hasta)
+                {
+                    MessageBox.Show("El valor 'Desde' no puede ser mayor que 'Hasta'",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                listaFiltrada = negocio.FiltrarPrecio(desde, hasta);
+
+                dgvArticulos.DataSource = null;
+                dgvArticulos.DataSource = listaFiltrada;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                MessageBox.Show("No se pudo filtrar los articulos correctamente.");
+            }
+        }
+
     }
-
-
 }

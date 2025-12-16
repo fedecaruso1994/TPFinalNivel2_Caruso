@@ -164,6 +164,53 @@ namespace negocio
                 accesoDatos.CerrarConexion();
             }
         }
+
+        public List<Articulo> FiltrarPrecio (decimal desde, decimal hasta)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            List<Articulo> listaArticulos = new List<Articulo>();
+
+            try
+            {
+                accesoDatos.SetearConsulta(@"SELECT AR.Id, AR.Codigo as Código, AR.Nombre, AR.Descripcion , AR.Precio, AR.IdMarca, MA.Descripcion as Marca, AR.IdCategoria, CA.Descripcion as Categoria, AR.ImagenUrl 
+                                            FROM ARTICULOS AR INNER JOIN MARCAS MA on AR.IdMarca = MA.Id
+                                            INNER JOIN CATEGORIAS CA on AR.IdCategoria = CA.Id 
+                                            WHERE AR.Precio BETWEEN @desde AND @hasta");
+
+                accesoDatos.EjecutarLectura();
+                while (accesoDatos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Id = (int)accesoDatos.Lector["Id"];
+                    aux.Codigo = (string)accesoDatos.Lector["Código"];
+                    aux.Nombre = (string)accesoDatos.Lector["Nombre"];
+                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+                    aux.Precio = (decimal)accesoDatos.Lector["Precio"];
+
+                    aux.Marca = new Marca();
+                    aux.Marca.Id = (int)accesoDatos.Lector["IdMarca"];
+                    aux.Marca.Descripcion = (string)accesoDatos.Lector["Marca"];
+
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)accesoDatos.Lector["IdCategoria"];
+                    aux.Categoria.Descripcion = (string)accesoDatos.Lector["Categoria"];
+
+                    if (!(accesoDatos.Lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
+
+                    listaArticulos.Add(aux);
+                }
+                return listaArticulos;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                accesoDatos.CerrarConexion();
+            }
+        }
     }
 
     //Nos falta agregar un metodo filtrar, pero, como no especifica que criterios para filtrar pide. Probablemente, reutilicemos el metodo listar, para que pueda listar por crierios. 
