@@ -172,6 +172,12 @@ namespace negocio
 
             try
             {
+                 
+                // si desde es >  0 && hasta es = 0 
+                // tengo que pedir todos los mayores que desde
+
+                // si desde y hasta son == a 0 que pasa ? 
+
                 accesoDatos.SetearConsulta(@"SELECT AR.Id, AR.Codigo as Código, AR.Nombre, AR.Descripcion , AR.Precio, AR.IdMarca, MA.Descripcion as Marca, AR.IdCategoria, CA.Descripcion as Categoria, AR.ImagenUrl 
                                             FROM ARTICULOS AR INNER JOIN MARCAS MA on AR.IdMarca = MA.Id
                                             INNER JOIN CATEGORIAS CA on AR.IdCategoria = CA.Id 

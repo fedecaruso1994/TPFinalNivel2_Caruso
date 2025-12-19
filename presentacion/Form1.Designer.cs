@@ -146,17 +146,34 @@
             // 
             // numDesde
             // 
+            this.numDesde.DecimalPlaces = 2;
             this.numDesde.Location = new System.Drawing.Point(750, 24);
+            this.numDesde.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.numDesde.Name = "numDesde";
             this.numDesde.Size = new System.Drawing.Size(120, 26);
             this.numDesde.TabIndex = 15;
+            this.numDesde.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numDesde.ThousandsSeparator = true;
+            this.numDesde.ValueChanged += new System.EventHandler(this.numDesde_ValueChanged);
             // 
             // numHasta
             // 
+            this.numHasta.DecimalPlaces = 2;
             this.numHasta.Location = new System.Drawing.Point(962, 24);
+            this.numHasta.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.numHasta.Name = "numHasta";
             this.numHasta.Size = new System.Drawing.Size(120, 26);
             this.numHasta.TabIndex = 16;
+            this.numHasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numHasta.ThousandsSeparator = true;
             // 
             // frmArticulos
             // 

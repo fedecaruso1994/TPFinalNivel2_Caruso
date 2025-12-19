@@ -128,15 +128,24 @@ namespace presentacion
 
 
             try
-            { 
+            {
+
                 decimal desde = numDesde.Value;
                 decimal hasta = numHasta.Value;
-                if (desde > 0 && hasta > 0 && desde > hasta)
+
+                if (desde == 0 && hasta == 0)
                 {
-                    MessageBox.Show("El valor 'Desde' no puede ser mayor que 'Hasta'",
-                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    listaFiltrada = negocio.Listar();
+
                 }
+                else if (desde > hasta)
+                {
+                    MessageBox.Show("Ingrese un rango válido para filtrar.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+
 
                 listaFiltrada = negocio.FiltrarPrecio(desde, hasta);
 
@@ -151,5 +160,9 @@ namespace presentacion
             }
         }
 
+        private void numDesde_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

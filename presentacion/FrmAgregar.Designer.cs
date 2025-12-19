@@ -133,13 +133,15 @@
             this.numPrecio.DecimalPlaces = 2;
             this.numPrecio.Location = new System.Drawing.Point(166, 264);
             this.numPrecio.Maximum = new decimal(new int[] {
-            1000000,
+            999999999,
             0,
             0,
             0});
             this.numPrecio.Name = "numPrecio";
             this.numPrecio.Size = new System.Drawing.Size(173, 26);
             this.numPrecio.TabIndex = 5;
+            this.numPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numPrecio.ThousandsSeparator = true;
             this.numPrecio.ValueChanged += new System.EventHandler(this.numPrecio_ValueChanged);
             // 
             // lblMarca
