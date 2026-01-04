@@ -125,7 +125,7 @@ namespace presentacion
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             List<Articulo> listaFiltrada;
-
+            tbxFiltro.Text = string.Empty;
 
             try
             {
@@ -138,19 +138,20 @@ namespace presentacion
                     listaFiltrada = negocio.Listar();
 
                 }
-                else if (desde > hasta)
+                if (hasta != 0 && desde > hasta)
                 {
-                    MessageBox.Show("Ingrese un rango válido para filtrar.",
+                    MessageBox.Show("Ingrese un rango válido para buscar.",
                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    return;
                 }
-
-
-
-                listaFiltrada = negocio.FiltrarPrecio(desde, hasta);
+                else
+                {
+                    listaFiltrada = negocio.FiltrarPrecio(desde, hasta);
+                }
 
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaFiltrada;
+                ocultarColumnas();
 
             }
             catch (Exception ex)

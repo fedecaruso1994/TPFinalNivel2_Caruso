@@ -44,7 +44,7 @@ namespace presentacion
 
                 articulo.Codigo = tbxCodigo.Text;
                 articulo.Nombre = tbxNombre.Text;
-                articulo.Descripcion = tbxCodigo.Text;
+                articulo.Descripcion = tbxDescripcion.Text;
                 articulo.Precio = numPrecio.Value;
                 articulo.ImagenUrl = tbxImagen.Text;
                 articulo.Categoria = (Categoria)comboCategoria.SelectedItem;
@@ -96,7 +96,7 @@ namespace presentacion
                     tbxDescripcion.Text = articulo.Descripcion;
                     tbxImagen.Text = articulo.ImagenUrl;
                     numPrecio.Value = articulo.Precio;
-                    HelperImage.CargarImagen(pictureBoxAlta, articulo.ImagenUrl);
+                    HelperImage.CargarImagen(pictureBoxAlta, tbxImagen.Text);
                     comboCategoria.SelectedValue = articulo.Categoria.Id;
                     comboMarca.SelectedValue = articulo.Marca.Id;
                 }
