@@ -34,7 +34,7 @@ namespace presentacion
             {
                 listadoArticulos = articuloNegocio.Listar();
                 dgvArticulos.DataSource = listadoArticulos;
-                ocultarColumnas();
+                formatearGrilla();
             }
             catch (Exception ex)
             {
@@ -42,10 +42,11 @@ namespace presentacion
                 MessageBox.Show("No se pudo cargar la lista de articulos.");
             }
         }
-        private void ocultarColumnas()
+        private void formatearGrilla()
         {
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
+            dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "C";
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -66,6 +67,12 @@ namespace presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (dgvArticulos.CurrentRow == null)
+            {
+                MessageBox.Show("No hay elementos seleccionados.");
+                return;
+            }
+                
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             FrmAgregar modiicarArticulo = new FrmAgregar(seleccionado);
             modiicarArticulo.ShowDialog();
@@ -83,6 +90,11 @@ namespace presentacion
             Articulo seleccionado;
             try
             {
+                if (dgvArticulos.CurrentRow == null)
+                {
+                    MessageBox.Show("No hay elementos seleccionados.");
+                    return;
+                }
                 DialogResult respuesta = MessageBox.Show("¿Desea confirmar la eliminacion?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
@@ -108,17 +120,22 @@ namespace presentacion
 
         private void tbxFiltro_TextChanged(object sender, EventArgs e)
         {
+            if (listadoArticulos == null)
+                return;
+
             List<Articulo> listaFiltrada;
             string filtro = tbxFiltro.Text.ToUpper();
+            numDesde.Value = 0;
+            numHasta.Value = 0;
 
             if (filtro.Length > 2)
-                listaFiltrada = listadoArticulos.FindAll(art => art.Nombre.ToUpper().Contains(filtro) || art.Codigo.ToUpper().Contains(filtro) || art.Marca.Descripcion.ToUpper().Contains(filtro) || art.Categoria.Descripcion.ToUpper().Contains(filtro));
+                listaFiltrada = listadoArticulos.FindAll(art => (art.Nombre ?? string.Empty).ToUpper().Contains(filtro) || (art.Codigo ?? string.Empty).ToUpper().Contains(filtro) || (art.Marca?.Descripcion ?? string.Empty).ToUpper().Contains(filtro) || (art.Categoria?.Descripcion ?? string.Empty).ToUpper().Contains(filtro));
             else
                 listaFiltrada = listadoArticulos;
 
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;
-            ocultarColumnas();
+            formatearGrilla();
         }
 
         private void btnBuscarPrecio_Click(object sender, EventArgs e)
@@ -151,7 +168,7 @@ namespace presentacion
 
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaFiltrada;
-                ocultarColumnas();
+                formatearGrilla();
 
             }
             catch (Exception ex)

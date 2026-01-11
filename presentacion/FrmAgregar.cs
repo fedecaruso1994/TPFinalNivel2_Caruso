@@ -6,10 +6,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 
 namespace presentacion
@@ -17,6 +19,7 @@ namespace presentacion
     public partial class FrmAgregar : Form
     {
         private Articulo articulo = null;
+        private OpenFileDialog archivo  = null;
         public FrmAgregar()
         {
             InitializeComponent();
@@ -60,6 +63,9 @@ namespace presentacion
                     articuloNegocio.Agregar(articulo);
                     MessageBox.Show("Artículo agregado con éxito.");
                 }
+                if(archivo != null && !(tbxImagen.Text.ToUpper().Contains("HTTP"))) 
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+                
                 Close();
 
 
@@ -112,6 +118,19 @@ namespace presentacion
         private void tbxImagen_Leave(object sender, EventArgs e)
         {
             HelperImage.CargarImagen(pictureBoxAlta, tbxImagen.Text);
+        }
+
+        private void btnAgregarImg_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg|png|*.png";
+            if(archivo.ShowDialog() == DialogResult.OK)
+            {
+                tbxImagen.Text= archivo.FileName;
+                HelperImage.CargarImagen(pictureBoxAlta, archivo.FileName);
+
+              
+            }
         }
     }
 }

@@ -45,6 +45,7 @@
             this.tbxImagen = new System.Windows.Forms.TextBox();
             this.lblImagen = new System.Windows.Forms.Label();
             this.pictureBoxAlta = new System.Windows.Forms.PictureBox();
+            this.btnAgregarImg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlta)).BeginInit();
             this.SuspendLayout();
@@ -184,7 +185,7 @@
             // 
             this.tbxImagen.Location = new System.Drawing.Point(166, 220);
             this.tbxImagen.Name = "tbxImagen";
-            this.tbxImagen.Size = new System.Drawing.Size(173, 26);
+            this.tbxImagen.Size = new System.Drawing.Size(135, 26);
             this.tbxImagen.TabIndex = 4;
             this.tbxImagen.Leave += new System.EventHandler(this.tbxImagen_Leave);
             // 
@@ -199,18 +200,29 @@
             // 
             // pictureBoxAlta
             // 
-            this.pictureBoxAlta.Location = new System.Drawing.Point(388, 46);
+            this.pictureBoxAlta.Location = new System.Drawing.Point(389, 44);
             this.pictureBoxAlta.Name = "pictureBoxAlta";
-            this.pictureBoxAlta.Size = new System.Drawing.Size(370, 326);
-            this.pictureBoxAlta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAlta.Size = new System.Drawing.Size(334, 334);
+            this.pictureBoxAlta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAlta.TabIndex = 18;
             this.pictureBoxAlta.TabStop = false;
+            // 
+            // btnAgregarImg
+            // 
+            this.btnAgregarImg.Location = new System.Drawing.Point(307, 220);
+            this.btnAgregarImg.Name = "btnAgregarImg";
+            this.btnAgregarImg.Size = new System.Drawing.Size(32, 32);
+            this.btnAgregarImg.TabIndex = 19;
+            this.btnAgregarImg.Text = "...";
+            this.btnAgregarImg.UseVisualStyleBackColor = true;
+            this.btnAgregarImg.Click += new System.EventHandler(this.btnAgregarImg_Click);
             // 
             // FrmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 527);
+            this.Controls.Add(this.btnAgregarImg);
             this.Controls.Add(this.pictureBoxAlta);
             this.Controls.Add(this.tbxImagen);
             this.Controls.Add(this.lblImagen);
@@ -257,5 +269,6 @@
         private System.Windows.Forms.TextBox tbxImagen;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.PictureBox pictureBoxAlta;
+        private System.Windows.Forms.Button btnAgregarImg;
     }
 }
