@@ -29,7 +29,10 @@ namespace negocio
                     aux.Id = (int)accesoDatos.Lector["Id"];
                     aux.Codigo = (string)accesoDatos.Lector["Código"];
                     aux.Nombre = (string)accesoDatos.Lector["Nombre"];
-                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+
+                    if (!(accesoDatos.Lector["Descripcion"] is DBNull))
+                        aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
 
                     aux.Marca = new Marca();
@@ -68,10 +71,10 @@ namespace negocio
 
                 accesoDatos.SetearParametro("@Codigo", articulo.Codigo);
                 accesoDatos.SetearParametro("@Nombre", articulo.Nombre);
-                accesoDatos.SetearParametro("@Descripcion", articulo.Descripcion);
+                accesoDatos.SetearParametro("@Descripcion", (object)articulo.Descripcion ?? DBNull.Value);
                 accesoDatos.SetearParametro("@IdMarca", articulo.Marca.Id);
                 accesoDatos.SetearParametro("@IdCategoria", articulo.Categoria.Id);
-                accesoDatos.SetearParametro("@urlImagen", articulo.ImagenUrl);
+                accesoDatos.SetearParametro("@urlImagen", (object)articulo.ImagenUrl ?? DBNull.Value);
                 accesoDatos.SetearParametro("@Precio", articulo.Precio);
 
                 accesoDatos.EjecutarAccion();
@@ -99,7 +102,7 @@ namespace negocio
 	                                    Descripcion = @descripcion, 
 	                                    IdMarca = @idMarca, 
                                         IdCategoria = @idCategoria, 
-	                                    ImagenUrl = @imagenURL, 
+	                                    ImagenUrl = @urlImagen, 
 	                                    Precio = @precio
                                     WHERE Id = @id";
 
@@ -107,10 +110,10 @@ namespace negocio
 
                 accesoDatos.SetearParametro("@codigo", articulo.Codigo);
                 accesoDatos.SetearParametro("@nombre", articulo.Nombre);
-                accesoDatos.SetearParametro("@descripcion", articulo.Descripcion);
+                accesoDatos.SetearParametro("@descripcion", (object)articulo.Descripcion ?? DBNull.Value);
                 accesoDatos.SetearParametro("@idMarca", articulo.Marca.Id);
                 accesoDatos.SetearParametro("@idCategoria", articulo.Categoria.Id);
-                accesoDatos.SetearParametro("@imagenURL", articulo.ImagenUrl);
+                accesoDatos.SetearParametro("@urlImagen", (object)articulo.ImagenUrl ?? DBNull.Value);
                 accesoDatos.SetearParametro("@precio", articulo.Precio);
                 accesoDatos.SetearParametro("@id", articulo.Id);
 
@@ -201,7 +204,10 @@ namespace negocio
                     aux.Id = (int)accesoDatos.Lector["Id"];
                     aux.Codigo = (string)accesoDatos.Lector["Código"];
                     aux.Nombre = (string)accesoDatos.Lector["Nombre"];
-                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+
+                    if (!(accesoDatos.Lector["Descripcion"] is DBNull))
+                        aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
 
                     aux.Marca = new Marca();

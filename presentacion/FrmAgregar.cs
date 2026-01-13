@@ -4,6 +4,7 @@ using presentacion.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -11,7 +12,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComboBox = System.Windows.Forms.ComboBox;
+using TextBox = System.Windows.Forms.TextBox;
 
 
 namespace presentacion
@@ -19,7 +22,7 @@ namespace presentacion
     public partial class FrmAgregar : Form
     {
         private Articulo articulo = null;
-        private OpenFileDialog archivo  = null;
+        private OpenFileDialog archivo = null;
         public FrmAgregar()
         {
             InitializeComponent();
@@ -40,6 +43,11 @@ namespace presentacion
         {
 
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            if (!validarFiltros()) {
+                MessageBox.Show("Faltan cargar campos obligatorios.");
+                return;
+            }
+
             try
             {
                 if (articulo == null)
@@ -47,9 +55,9 @@ namespace presentacion
 
                 articulo.Codigo = tbxCodigo.Text;
                 articulo.Nombre = tbxNombre.Text;
-                articulo.Descripcion = tbxDescripcion.Text;
+                articulo.Descripcion = string.IsNullOrEmpty(tbxDescripcion.Text) ? null : tbxDescripcion.Text;
                 articulo.Precio = numPrecio.Value;
-                articulo.ImagenUrl = tbxImagen.Text;
+                articulo.ImagenUrl = string.IsNullOrEmpty(tbxImagen.Text) ? null : tbxImagen.Text;
                 articulo.Categoria = (Categoria)comboCategoria.SelectedItem;
                 articulo.Marca = (Marca)comboMarca.SelectedItem;
 
@@ -63,9 +71,9 @@ namespace presentacion
                     articuloNegocio.Agregar(articulo);
                     MessageBox.Show("Artículo agregado con éxito.");
                 }
-                if(archivo != null && !(tbxImagen.Text.ToUpper().Contains("HTTP"))) 
+                if (archivo != null && !(tbxImagen.Text.ToUpper().Contains("HTTP")))
                     File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
-                
+
                 Close();
 
 
@@ -76,6 +84,50 @@ namespace presentacion
                 Console.WriteLine(ex.ToString());
             }
         }
+
+        private bool validarFiltros() 
+        {
+            bool esValido = true;
+            if (!validarDatos(tbxCodigo)) 
+                esValido = false;
+            if (!validarDatos(tbxNombre)) 
+                esValido = false;
+            if (!validarDatos(comboMarca)) 
+                esValido = false;
+            if (!validarDatos(comboCategoria)) 
+                esValido = false;
+
+            return esValido;
+        }
+        private bool validarDatos(TextBox tb)
+        {
+            if (tb.Text == null || tb.Text == "")
+            {
+                tb.BackColor = Color.MistyRose;
+                return false;
+            }
+            else
+            {
+                tb.BackColor = SystemColors.Window;
+                return true;
+            }
+
+        }
+        private bool validarDatos(ComboBox cb)
+        {
+            if (cb.SelectedIndex < 0)
+            {
+                cb.BackColor = Color.MistyRose;
+                return false;
+            }
+            else
+            {
+                cb.BackColor = SystemColors.Window;
+                return true;
+            }
+        }
+
+
 
         private void numPrecio_ValueChanged(object sender, EventArgs e)
         {
@@ -124,12 +176,12 @@ namespace presentacion
         {
             archivo = new OpenFileDialog();
             archivo.Filter = "jpg|*.jpg|png|*.png";
-            if(archivo.ShowDialog() == DialogResult.OK)
+            if (archivo.ShowDialog() == DialogResult.OK)
             {
-                tbxImagen.Text= archivo.FileName;
+                tbxImagen.Text = archivo.FileName;
                 HelperImage.CargarImagen(pictureBoxAlta, archivo.FileName);
 
-              
+
             }
         }
     }
