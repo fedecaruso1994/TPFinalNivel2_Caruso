@@ -50,16 +50,25 @@ namespace presentacion
 
             try
             {
-                if (articulo == null)
-                    articulo = new Articulo();
+                if (archivo != null && !(tbxImagen.Text.ToUpper().Contains("HTTP")))
+                {
+                    string nombreArchivo = Path.GetFileName(archivo.FileName);
+                    string fecha = DateTime.Now.ToString("yyyyMMddHHmmss");
+                    string rutaDestino = ConfigurationManager.AppSettings["images-folder"] + fecha + "_" + nombreArchivo;
 
-                articulo.Codigo = tbxCodigo.Text;
-                articulo.Nombre = tbxNombre.Text;
-                articulo.Descripcion = string.IsNullOrEmpty(tbxDescripcion.Text) ? null : tbxDescripcion.Text;
-                articulo.Precio = numPrecio.Value;
-                articulo.ImagenUrl = string.IsNullOrEmpty(tbxImagen.Text) ? null : tbxImagen.Text;
-                articulo.Categoria = (Categoria)comboCategoria.SelectedItem;
-                articulo.Marca = (Marca)comboMarca.SelectedItem;
+                    articulo.ImagenUrl = rutaDestino;
+
+                    if (!Directory.Exists(ConfigurationManager.AppSettings["images-folder"]))
+                    {
+                        Directory.CreateDirectory(ConfigurationManager.AppSettings["images-folder"]);
+                    }
+
+                    File.Copy(archivo.FileName, rutaDestino);
+                }
+                else
+                {
+                    articulo.ImagenUrl = tbxImagen.Text;
+                }
 
                 if (articulo.Id != 0)
                 {
@@ -71,17 +80,13 @@ namespace presentacion
                     articuloNegocio.Agregar(articulo);
                     MessageBox.Show("Artículo agregado con éxito.");
                 }
-                if (archivo != null && !(tbxImagen.Text.ToUpper().Contains("HTTP")))
-                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
 
+                // Eliminamos el File.Copy que tenías al final, ya lo hicimos arriba de forma segura.
                 Close();
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al agregar articulo, contactese con el administrador.");
-                Console.WriteLine(ex.ToString());
+                MessageBox.Show("Error al agregar articulo: " + ex.Message);
             }
         }
 

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace negocio
 {
@@ -16,7 +18,8 @@ namespace negocio
         public SqlDataReader Lector { get { return lector; } }
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true;");
+            string cadena = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
+            conexion = new SqlConnection(cadena);
             comando = new SqlCommand();
         }
 

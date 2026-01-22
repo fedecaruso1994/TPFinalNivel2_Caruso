@@ -182,5 +182,19 @@ namespace presentacion
         {
 
         }
+
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                FrmDetalle detalle = new FrmDetalle(seleccionado);
+                detalle.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un artículo para ver el detalle.");
+            }
+        }
     }
 }

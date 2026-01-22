@@ -155,7 +155,7 @@ namespace negocio
             {
                 string consulta = "Update ARTICULOS set Precio = (-Precio) Where Id = @Id";
                 accesoDatos.SetearConsulta(consulta);
-                accesoDatos.SetearParametro("Id", id);
+                accesoDatos.SetearParametro("@Id", id);
                 accesoDatos.EjecutarAccion();
             }
             catch (Exception)
