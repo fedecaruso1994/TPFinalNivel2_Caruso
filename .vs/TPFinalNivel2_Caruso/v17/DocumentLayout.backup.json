@@ -3,48 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\frmagregar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmagregar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\frmagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\presentacion\\frmdetalle.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmdetalle.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\presentacion\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\presentacion\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\presentacion\\frmpapelera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmpapelera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\frmdetalle.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmdetalle.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\presentacion\\frmagregar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmagregar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\frmagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\frmagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -53,26 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\helpers\\helperimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70767953-B7A4-44E6-B5ED-6C79D573EE49}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\helpers\\helperimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|solutionrelative:negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\negocio\\categorianegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C026A75-3ADE-4397-8FF3-9D1A9C115D29}|negocio\\negocio.csproj|solutionrelative:negocio\\categorianegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5D8B42-AE00-4998-835E-CCCF10A3BFF9}|dominio\\dominio.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\dominio\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5D8B42-AE00-4998-835E-CCCF10A3BFF9}|dominio\\dominio.csproj|solutionrelative:dominio\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5D8B42-AE00-4998-835E-CCCF10A3BFF9}|dominio\\dominio.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\dominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5D8B42-AE00-4998-835E-CCCF10A3BFF9}|dominio\\dominio.csproj|solutionrelative:dominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5D8B42-AE00-4998-835E-CCCF10A3BFF9}|dominio\\dominio.csproj|c:\\users\\fedec\\onedrive\\desktop\\tpfinalnivel2_caruso\\dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5D8B42-AE00-4998-835E-CCCF10A3BFF9}|dominio\\dominio.csproj|solutionrelative:dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,20 +74,159 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmPapelera.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmPapelera.cs",
+              "RelativeDocumentMoniker": "presentacion\\FrmPapelera.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmPapelera.cs [Dise\u00F1o]",
+              "RelativeToolTip": "presentacion\\FrmPapelera.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-24T14:59:12.23Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.cs",
+              "RelativeDocumentMoniker": "presentacion\\Form1.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.cs",
+              "RelativeToolTip": "presentacion\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T13:48:07.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "negocio\\AccesoDatos.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\AccesoDatos.cs",
+              "RelativeToolTip": "negocio\\AccesoDatos.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T22:35:36.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmAgregar.cs",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.cs",
+              "RelativeDocumentMoniker": "presentacion\\FrmAgregar.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.cs",
+              "RelativeToolTip": "presentacion\\FrmAgregar.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwFwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T13:03:50.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmAgregar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.cs",
+              "RelativeDocumentMoniker": "presentacion\\FrmAgregar.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.cs [Dise\u00F1o]",
+              "RelativeToolTip": "presentacion\\FrmAgregar.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T13:01:11.025Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmAgregar.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.Designer.cs",
+              "RelativeDocumentMoniker": "presentacion\\FrmAgregar.Designer.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.Designer.cs",
+              "RelativeToolTip": "presentacion\\FrmAgregar.Designer.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAiwFkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T22:22:59.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "presentacion\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.Designer.cs",
+              "RelativeToolTip": "presentacion\\Form1.Designer.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwDgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T13:47:57.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FrmDetalle.Designer.cs",
               "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.Designer.cs",
               "RelativeDocumentMoniker": "presentacion\\FrmDetalle.Designer.cs",
               "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.Designer.cs",
               "RelativeToolTip": "presentacion\\FrmDetalle.Designer.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAADwv9IAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAMsAAAAAAAAAAADwv/gAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T23:33:53.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ArticuloNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\ArticuloNegocio.cs",
+              "RelativeDocumentMoniker": "negocio\\ArticuloNegocio.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\ArticuloNegocio.cs",
+              "RelativeToolTip": "negocio\\ArticuloNegocio.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAuwB8BAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T23:17:06.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.cs",
+              "RelativeDocumentMoniker": "presentacion\\Form1.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "presentacion\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T13:47:34.566Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.cs",
+              "RelativeDocumentMoniker": "presentacion\\FrmDetalle.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.cs",
+              "RelativeToolTip": "presentacion\\FrmDetalle.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T23:13:10.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "FrmDetalle.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.cs",
+              "RelativeDocumentMoniker": "presentacion\\FrmDetalle.cs",
+              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.cs [Dise\u00F1o]",
+              "RelativeToolTip": "presentacion\\FrmDetalle.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T23:07:39.936Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\App.config",
               "RelativeDocumentMoniker": "presentacion\\App.config",
@@ -116,134 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.cs",
-              "RelativeDocumentMoniker": "presentacion\\Form1.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "presentacion\\Form1.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T13:47:34.566Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "presentacion\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.Designer.cs",
-              "RelativeToolTip": "presentacion\\Form1.Designer.cs",
-              "ViewState": "AgIAAN0AAAAAAAAAAADwvysBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T13:47:57.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.cs",
-              "RelativeDocumentMoniker": "presentacion\\Form1.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Form1.cs",
-              "RelativeToolTip": "presentacion\\Form1.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAADwv3YAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T13:48:07.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmAgregar.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.cs",
-              "RelativeDocumentMoniker": "presentacion\\FrmAgregar.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.cs [Dise\u00F1o]",
-              "RelativeToolTip": "presentacion\\FrmAgregar.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T13:01:11.025Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FrmAgregar.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.cs",
-              "RelativeDocumentMoniker": "presentacion\\FrmAgregar.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.cs",
-              "RelativeToolTip": "presentacion\\FrmAgregar.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAADwv0YAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T13:03:50.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmAgregar.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.Designer.cs",
-              "RelativeDocumentMoniker": "presentacion\\FrmAgregar.Designer.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmAgregar.Designer.cs",
-              "RelativeToolTip": "presentacion\\FrmAgregar.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACABAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T22:22:59.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FrmDetalle.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.cs",
-              "RelativeDocumentMoniker": "presentacion\\FrmDetalle.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.cs [Dise\u00F1o]",
-              "RelativeToolTip": "presentacion\\FrmDetalle.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T23:07:39.936Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmDetalle.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.cs",
-              "RelativeDocumentMoniker": "presentacion\\FrmDetalle.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\FrmDetalle.cs",
-              "RelativeToolTip": "presentacion\\FrmDetalle.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAmwDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T23:13:10.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AccesoDatos.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\AccesoDatos.cs",
-              "RelativeDocumentMoniker": "negocio\\AccesoDatos.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\AccesoDatos.cs",
-              "RelativeToolTip": "negocio\\AccesoDatos.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAA5wBIAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T22:35:36.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ArticuloNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\ArticuloNegocio.cs",
-              "RelativeDocumentMoniker": "negocio\\ArticuloNegocio.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\ArticuloNegocio.cs",
-              "RelativeToolTip": "negocio\\ArticuloNegocio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T23:17:06.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "HelperImage.cs",
               "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\presentacion\\Helpers\\HelperImage.cs",
               "RelativeDocumentMoniker": "presentacion\\Helpers\\HelperImage.cs",
@@ -251,73 +247,7 @@
               "RelativeToolTip": "presentacion\\Helpers\\HelperImage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T22:39:06.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MarcaNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\MarcaNegocio.cs",
-              "RelativeDocumentMoniker": "negocio\\MarcaNegocio.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\MarcaNegocio.cs",
-              "RelativeToolTip": "negocio\\MarcaNegocio.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T22:35:57.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CategoriaNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\CategoriaNegocio.cs",
-              "RelativeDocumentMoniker": "negocio\\CategoriaNegocio.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\negocio\\CategoriaNegocio.cs",
-              "RelativeToolTip": "negocio\\CategoriaNegocio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T22:35:50.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Marca.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\dominio\\Marca.cs",
-              "RelativeDocumentMoniker": "dominio\\Marca.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\dominio\\Marca.cs",
-              "RelativeToolTip": "dominio\\Marca.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T22:35:22.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\dominio\\Categoria.cs",
-              "RelativeDocumentMoniker": "dominio\\Categoria.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\dominio\\Categoria.cs",
-              "RelativeToolTip": "dominio\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T22:35:12.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\dominio\\Articulo.cs",
-              "RelativeDocumentMoniker": "dominio\\Articulo.cs",
-              "ToolTip": "C:\\Users\\fedec\\OneDrive\\Desktop\\TPFinalNivel2_Caruso\\dominio\\Articulo.cs",
-              "RelativeToolTip": "dominio\\Articulo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T22:35:06.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-13T22:39:06.828Z"
             }
           ]
         }

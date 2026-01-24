@@ -97,6 +97,7 @@
             this.tbxDescripcion.Multiline = true;
             this.tbxDescripcion.Name = "tbxDescripcion";
             this.tbxDescripcion.Size = new System.Drawing.Size(262, 85);
+            this.tbxDescripcion.MaxLength = 120;
             this.tbxDescripcion.TabIndex = 6;
             // 
             // tbxNombre

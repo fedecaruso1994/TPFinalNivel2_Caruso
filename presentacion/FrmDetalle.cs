@@ -20,21 +20,19 @@ namespace presentacion
         public FrmDetalle(Articulo articulo)
         {
             InitializeComponent();
-            this.articuloSeleccionado = articulo; // Lo asignamos a nuestra variable privada
+            this.articuloSeleccionado = articulo;
         }
 
         private void FrmDetalle_Load(object sender, EventArgs e)
         {
-            // Cargamos los datos en los Labels
-            // Asumo que pusiste labels con estos nombres:
+           
             lblCodigoDetalle.Text = articuloSeleccionado.Codigo;
             lblNombreDetalle.Text = articuloSeleccionado.Nombre;
             lblDescripcionDetalle.Text = articuloSeleccionado.Descripcion;
             lblMarcaDetalle.Text = articuloSeleccionado.Marca.Descripcion;
             lblCategoriaDetalle.Text = articuloSeleccionado.Categoria.Descripcion;
-            lblPrecioDetalle.Text = "$ " + articuloSeleccionado.Precio.ToString("0.00"); // Formato moneda
+            lblPrecioDetalle.Text = "$ " + articuloSeleccionado.Precio.ToString("0.00"); 
 
-            // Cargamos la imagen usando tu Helper
             HelperImage.CargarImagen(pbxDetalle, articuloSeleccionado.ImagenUrl);
         }
 

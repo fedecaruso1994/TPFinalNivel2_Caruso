@@ -136,7 +136,7 @@ namespace negocio
             {
                 string consulta = "DELETE FROM ARTICULOS Where Id = @Id";
                 accesoDatos.SetearConsulta(consulta);
-                accesoDatos.SetearParametro("Id",id);
+                accesoDatos.SetearParametro("@Id",id);
                 accesoDatos.EjecutarAccion();
             }
             catch (Exception)
@@ -233,6 +233,71 @@ namespace negocio
             {
                 accesoDatos.CerrarConexion();
             }
+        }
+
+        public List<Articulo> ListarEliminados()
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            List<Articulo> listaArticulos = new List<Articulo>();
+            try
+            {
+                accesoDatos.SetearConsulta(@"SELECT AR.Id, AR.Codigo as Código, AR.Nombre, AR.Descripcion, AR.Precio, AR.IdMarca, MA.Descripcion as Marca, AR.IdCategoria, CA.Descripcion as Categoria, AR.ImagenUrl 
+                                 FROM ARTICULOS AR 
+                                 INNER JOIN MARCAS MA on AR.IdMarca = MA.Id
+                                 INNER JOIN CATEGORIAS CA on AR.IdCategoria = CA.Id 
+                                 WHERE AR.Precio < 0");
+                accesoDatos.EjecutarLectura();
+
+                while (accesoDatos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Id = (int)accesoDatos.Lector["Id"];
+                    aux.Codigo = (string)accesoDatos.Lector["Código"];
+                    aux.Nombre = (string)accesoDatos.Lector["Nombre"];
+
+                    if (!(accesoDatos.Lector["Descripcion"] is DBNull))
+                        aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+
+                    aux.Precio = (decimal)accesoDatos.Lector["Precio"];
+
+                    aux.Marca = new Marca();
+                    aux.Marca.Id = (int)accesoDatos.Lector["IdMarca"];
+                    aux.Marca.Descripcion = (string)accesoDatos.Lector["Marca"];
+
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)accesoDatos.Lector["IdCategoria"];
+                    aux.Categoria.Descripcion = (string)accesoDatos.Lector["Categoria"];
+
+                    if (!(accesoDatos.Lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
+
+                    listaArticulos.Add(aux);
+                }
+                return listaArticulos;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                accesoDatos.CerrarConexion();
+            }
+        }
+
+        
+        public void Reactivar(int id)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                
+                accesoDatos.SetearConsulta("UPDATE ARTICULOS SET Precio = (Precio * -1) WHERE Id = @Id");
+                accesoDatos.SetearParametro("@Id", id);
+                accesoDatos.EjecutarAccion();
+            }
+            catch (Exception ex) { throw ex; }
+            finally { accesoDatos.CerrarConexion(); }
         }
     }
 

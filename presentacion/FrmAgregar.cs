@@ -70,19 +70,28 @@ namespace presentacion
                     articulo.ImagenUrl = tbxImagen.Text;
                 }
 
+                articulo.Codigo = tbxCodigo.Text;
+                articulo.Nombre = tbxNombre.Text;
+                articulo.Descripcion = string.IsNullOrEmpty(tbxDescripcion.Text) ? null : tbxDescripcion.Text;
+                articulo.Precio = numPrecio.Value;
+                articulo.Marca = (Marca)comboMarca.SelectedItem;
+                articulo.Categoria = (Categoria)comboCategoria.SelectedItem;
+
+                string mensaje = "";
+
                 if (articulo.Id != 0)
                 {
                     articuloNegocio.Modificar(articulo);
-                    MessageBox.Show("Artículo modificado con éxito.");
+                    mensaje = "Artículo modificado con éxito.";
                 }
                 else
                 {
                     articuloNegocio.Agregar(articulo);
-                    MessageBox.Show("Artículo agregado con éxito.");
+                    mensaje = "Artículo agregado con éxito.";
                 }
 
-                // Eliminamos el File.Copy que tenías al final, ya lo hicimos arriba de forma segura.
                 Close();
+                MessageBox.Show(mensaje);
             }
             catch (Exception ex)
             {

@@ -54,7 +54,7 @@
             this.dgvArticulos.AllowUserToAddRows = false;
             this.dgvArticulos.AllowUserToResizeColumns = false;
             this.dgvArticulos.AllowUserToResizeRows = false;
-            this.dgvArticulos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvArticulos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -67,6 +67,7 @@
             this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArticulos.ColumnHeadersHeight = 30;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.EnableHeadersVisualStyles = false;
             this.dgvArticulos.GridColor = System.Drawing.Color.SteelBlue;
