@@ -39,5 +39,24 @@ namespace negocio
             }
         }
 
+        public void Agregar(Categoria nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("INSERT INTO CATEGORIAS (Descripcion) VALUES (@desc)");
+                datos.SetearParametro("@desc", nuevo.Descripcion);
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
     }
 }

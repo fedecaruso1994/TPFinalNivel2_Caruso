@@ -196,5 +196,12 @@ namespace presentacion
                 MessageBox.Show("Por favor, seleccione un artículo para ver el detalle.");
             }
         }
+
+        private void btnPapelera_Click(object sender, EventArgs e)
+        {
+            FrmPapelera papelera = new FrmPapelera();
+            papelera.ShowDialog();
+            cargar(); 
+        }
     }
 }

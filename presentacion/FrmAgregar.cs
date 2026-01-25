@@ -47,7 +47,10 @@ namespace presentacion
                 MessageBox.Show("Faltan cargar campos obligatorios.");
                 return;
             }
-
+            if (articulo == null)
+            {
+                articulo = new Articulo();
+            }
             try
             {
                 if (archivo != null && !(tbxImagen.Text.ToUpper().Contains("HTTP")))
@@ -196,6 +199,63 @@ namespace presentacion
                 HelperImage.CargarImagen(pictureBoxAlta, archivo.FileName);
 
 
+            }
+        }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            
+            FrmAltaOpcional ventana = new FrmAltaOpcional("Marca");
+
+            if (ventana.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    MarcaNegocio negocio = new MarcaNegocio();
+                    Marca nueva = new Marca();
+                    nueva.Descripcion = ventana.TextoIngresado;
+
+                    negocio.Agregar(nueva);
+
+                    comboMarca.DataSource = null;
+                    comboMarca.DataSource = negocio.Listar();
+                    comboMarca.ValueMember = "Id";
+                    comboMarca.DisplayMember = "Descripcion";
+
+                    comboMarca.SelectedIndex = comboMarca.FindString(ventana.TextoIngresado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al agregar marca: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            FrmAltaOpcional ventana = new FrmAltaOpcional("Categoría");
+
+            if (ventana.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    CategoriaNegocio negocio = new CategoriaNegocio();
+                    Categoria nueva = new Categoria();
+                    nueva.Descripcion = ventana.TextoIngresado;
+
+                    negocio.Agregar(nueva);
+
+                    comboCategoria.DataSource = null;
+                    comboCategoria.DataSource = negocio.Listar();
+                    comboCategoria.ValueMember = "Id";
+                    comboCategoria.DisplayMember = "Descripcion";
+
+                    comboCategoria.SelectedIndex = comboCategoria.FindString(ventana.TextoIngresado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al agregar categoría: " + ex.Message);
+                }
             }
         }
     }

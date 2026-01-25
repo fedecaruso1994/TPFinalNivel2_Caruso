@@ -59,6 +59,12 @@
     <Compile Include="FrmAgregar.Designer.cs">
       <DependentUpon>FrmAgregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAltaOpcional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltaOpcional.Designer.cs">
+      <DependentUpon>FrmAltaOpcional.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAgregar.resx">
       <DependentUpon>FrmAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltaOpcional.resx">
+      <DependentUpon>FrmAltaOpcional.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDetalle.resx">
       <DependentUpon>FrmDetalle.cs</DependentUpon>

@@ -46,6 +46,9 @@
             this.lblImagen = new System.Windows.Forms.Label();
             this.pictureBoxAlta = new System.Windows.Forms.PictureBox();
             this.btnAgregarImg = new System.Windows.Forms.Button();
+            // 1. INSTANCIAMOS LOS BOTONES AQUÍ AL INICIO
+            this.btnAgregarMarca = new System.Windows.Forms.Button();
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlta)).BeginInit();
             this.SuspendLayout();
@@ -94,10 +97,10 @@
             // 
             this.tbxDescripcion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxDescripcion.Location = new System.Drawing.Point(166, 311);
+            this.tbxDescripcion.MaxLength = 120;
             this.tbxDescripcion.Multiline = true;
             this.tbxDescripcion.Name = "tbxDescripcion";
             this.tbxDescripcion.Size = new System.Drawing.Size(262, 85);
-            this.tbxDescripcion.MaxLength = 120;
             this.tbxDescripcion.TabIndex = 6;
             // 
             // tbxNombre
@@ -187,23 +190,24 @@
             this.lblCategoria.Text = "Categoría:";
             // 
             // comboMarca
-            // 
+            
             this.comboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboMarca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboMarca.FormattingEnabled = true;
             this.comboMarca.Location = new System.Drawing.Point(166, 132);
             this.comboMarca.Name = "comboMarca";
-            this.comboMarca.Size = new System.Drawing.Size(262, 33);
+            this.comboMarca.Size = new System.Drawing.Size(215, 33); // ANTES 262, AHORA 215
             this.comboMarca.TabIndex = 2;
             // 
             // comboCategoria
             // 
+            
             this.comboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCategoria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboCategoria.FormattingEnabled = true;
             this.comboCategoria.Location = new System.Drawing.Point(166, 178);
             this.comboCategoria.Name = "comboCategoria";
-            this.comboCategoria.Size = new System.Drawing.Size(262, 33);
+            this.comboCategoria.Size = new System.Drawing.Size(215, 33); // ANTES 262, AHORA 215
             this.comboCategoria.TabIndex = 3;
             // 
             // tbxImagen
@@ -247,12 +251,35 @@
             this.btnAgregarImg.UseVisualStyleBackColor = false;
             this.btnAgregarImg.Click += new System.EventHandler(this.btnAgregarImg_Click);
             // 
+            // btnAgregarMarca
+            // 
+            this.btnAgregarMarca.Location = new System.Drawing.Point(387, 132); // NUEVA UBICACIÓN
+            this.btnAgregarMarca.Name = "btnAgregarMarca";
+            this.btnAgregarMarca.Size = new System.Drawing.Size(35, 33);
+            this.btnAgregarMarca.TabIndex = 20;
+            this.btnAgregarMarca.Text = "+";
+            this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
+            // 
+            // btnAgregarCategoria
+            // 
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(387, 178); // NUEVA UBICACIÓN
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(35, 33);
+            this.btnAgregarCategoria.TabIndex = 21;
+            this.btnAgregarCategoria.Text = "+";
+            this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
+            // 
             // FrmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(843, 527);
+            // 2. AGREGAMOS LOS BOTONES A LOS CONTROLES
+            this.Controls.Add(this.btnAgregarCategoria);
+            this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.btnAgregarImg);
             this.Controls.Add(this.pictureBoxAlta);
             this.Controls.Add(this.tbxImagen);
@@ -304,5 +331,8 @@
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.PictureBox pictureBoxAlta;
         private System.Windows.Forms.Button btnAgregarImg;
+        
+        private System.Windows.Forms.Button btnAgregarMarca;
+        private System.Windows.Forms.Button btnAgregarCategoria;
     }
 }

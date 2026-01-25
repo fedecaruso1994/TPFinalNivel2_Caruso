@@ -43,6 +43,7 @@
             this.numDesde = new System.Windows.Forms.NumericUpDown();
             this.numHasta = new System.Windows.Forms.NumericUpDown();
             this.btnVerDetalle = new System.Windows.Forms.Button();
+            this.btnPapelera = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDesde)).BeginInit();
@@ -54,6 +55,7 @@
             this.dgvArticulos.AllowUserToAddRows = false;
             this.dgvArticulos.AllowUserToResizeColumns = false;
             this.dgvArticulos.AllowUserToResizeRows = false;
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -67,7 +69,6 @@
             this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArticulos.ColumnHeadersHeight = 30;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.EnableHeadersVisualStyles = false;
             this.dgvArticulos.GridColor = System.Drawing.Color.SteelBlue;
@@ -150,7 +151,7 @@
             this.lblFiltro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.Location = new System.Drawing.Point(30, 31);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(111, 25);
+            this.lblFiltro.Size = new System.Drawing.Size(118, 25);
             this.lblFiltro.TabIndex = 6;
             this.lblFiltro.Text = "Filtro Rápido:";
             // 
@@ -195,7 +196,7 @@
             this.lblHasta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHasta.Location = new System.Drawing.Point(900, 31);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(62, 25);
+            this.lblHasta.Size = new System.Drawing.Size(61, 25);
             this.lblHasta.TabIndex = 14;
             this.lblHasta.Text = "Hasta:";
             // 
@@ -249,12 +250,29 @@
             this.btnVerDetalle.UseVisualStyleBackColor = false;
             this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
             // 
+            // btnPapelera
+            // 
+            this.btnPapelera.BackColor = System.Drawing.Color.SlateGray;
+            this.btnPapelera.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPapelera.FlatAppearance.BorderSize = 0;
+            this.btnPapelera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPapelera.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPapelera.ForeColor = System.Drawing.Color.White;
+            this.btnPapelera.Location = new System.Drawing.Point(472, 461);
+            this.btnPapelera.Name = "btnPapelera";
+            this.btnPapelera.Size = new System.Drawing.Size(50, 45);
+            this.btnPapelera.TabIndex = 18;
+            this.btnPapelera.Text = "🗑️";
+            this.btnPapelera.UseVisualStyleBackColor = false;
+            this.btnPapelera.Click += new System.EventHandler(this.btnPapelera_Click);
+            // 
             // frmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1354, 532);
+            this.Controls.Add(this.btnPapelera);
             this.Controls.Add(this.btnVerDetalle);
             this.Controls.Add(this.numHasta);
             this.Controls.Add(this.numDesde);
@@ -297,5 +315,6 @@
         private System.Windows.Forms.NumericUpDown numDesde;
         private System.Windows.Forms.NumericUpDown numHasta;
         private System.Windows.Forms.Button btnVerDetalle;
+        private System.Windows.Forms.Button btnPapelera;
     }
 }
